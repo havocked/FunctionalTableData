@@ -52,6 +52,10 @@ extension FunctionalTableData {
 			return header.height
 		}
 		
+		public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+			return CGFloat.leastNormalMagnitude
+		}
+		
 		public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
 			guard let footer = data.sections[section].footer else {
 				// When given a height of zero grouped style UITableView's use their default value instead of zero. By returning CGFloat.min we get around this behavior and force UITableView to end up using a height of zero after all.
