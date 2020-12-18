@@ -90,17 +90,17 @@ extension FunctionalCollectionData {
 			}
 		}
 		
-		public func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-			return data.sections[indexPath]?.actions.canPerformAction != nil
-		}
-		
-		public func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-			return data.sections[indexPath]?.actions.canPerformAction?(action) ?? false
-		}
-		
-		public func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-			// required
-		}
+//		public func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+//			return data.sections[indexPath]?.actions.canPerformAction != nil
+//		}
+//
+//		public func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+//			return data.sections[indexPath]?.actions.canPerformAction?(action) ?? false
+//		}
+//		
+//		public func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+//			// required
+//		}
 		
 		public func collectionView(_ collectionView: UICollectionView, targetIndexPathForMoveFromItemAt originalIndexPath: IndexPath, toProposedIndexPath proposedIndexPath: IndexPath) -> IndexPath {
 			guard originalIndexPath.section == proposedIndexPath.section else {
